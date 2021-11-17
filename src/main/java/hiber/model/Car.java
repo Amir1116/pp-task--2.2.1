@@ -18,10 +18,11 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(mappedBy = "carId",cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "carId", cascade = CascadeType.ALL)
     private User user;
 
-    public Car(){}
+    public Car() {
+    }
 
     public Car(String model, int series) {
         this.model = model;
